@@ -1,0 +1,644 @@
+% https://www.youtube.com/watch?v=gjifrE_x4kw&feature=youtu.be
+
+\title{\href{http://www.blender.org}{Blender}}
+
+\maketitle
+\tableofcontents
+
+\chapter{\href{http://en.wikipedia.org/wiki/Blender_(software)}{Introduction}}
+
+\section{What?}
+\begin{itemize}
+\item A GPL 3D computer graphics software for creating animated films,
+  visual effects, art, 3D (printed) models, 3D applications and video
+  games.
+\end{itemize}
+
+\section{Who and when?}
+\begin{itemize}
+\item Ton Roosendaal, the main contributor of Blender, founded NaN
+  (Not a Number) Technologies in June 1998 and start sharing Blender
+  as shareware.
+\item NaN went backrupt in 2002, and together with Neo Geo,
+open-source Blender using 
+%\euro{}
+$100,000$ Euros collected from the
+community.
+\end{itemize}
+
+\section{Documentation}
+\begin{enumerate}
+\item The \href{http://www.blender.org}{Blender's website}.
+\item The \href{http://wiki.blender.org}{Blender Wiki}.
+\item \href{http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro}{Blender 3D: Noob to Pro}.
+\end{enumerate}
+
+\section{Projects}
+\begin{enumerate}
+\item \href{https://orange.blender.org}{Elephants Dream}.
+\item \href{https://peach.blender.org}{Big Buck Bunny}.
+\item \href{http://www.yofrankie.org}{Yo Frankie!}.
+\item \href{https://durian.blender.org}{Sintel}.
+\item \href{https://mango.blender.org}{Tears of Steel}.
+\item \href{http://gooseberry.blender.org/cosmos-laundromat}{Cosmos Laundromat}.
+\end{enumerate}
+
+\chapter{An example:
+\href{https://www.youtube.com/watch?v=y__uzGKmxt8}{The ceramic cup}}
+
+\begin{verbatim}
+/* Clear the project. */
+
+[File] /* [] means clickable */
+ +- [New]
+     +- [Reload Start-Up File]
+
+[Blender Render]
+ +- [Cycles Render]
+
+/* Some usefull information:
+
+How to select an object: <Right mouse> click on it.
+
+How to rotate the scene: Press and hold the <Middle mouse> button and move the mouse.
+
+How to pan: Press and hold the <Shift> key, press and hold the <Middle mouse> button and move the mouse.
+
+How to zoom: use the <Scrool wheel> of the mouse.
+
+*/
+
+/* Delete the cube. */
+
+Select the cube with the <Right mouse> button.
+
+Push the <X> key (delete) in the keyboard.
+
+Click on ``Delete''.
+
+/* Create the cup. */
+
+/* Create a cylinder. */
+
+[Add]
+ +- [Mesh]
+     +- [Cylinder]
+
+(Add Cylinder) /* () means that this is a label */
+ +- (Cap Fill Type)
+     +- [Triangle Fan]
+
+/* Change to Edit Mode. */
+
+[Object Mode]
+ +- [Edit Mode]
+
+[Viewport Shading]
+ +- [Wireframe]
+
+/* Delete the top portion of the cylinder. */
+
+Select the top center vertice of the cylinder using the <Right mouse> button.
+
+Press the <delete> key in the keyboard.
+
+Click on [Vertices].
+
+/* Change the view to the front view (number <1> in the number pad) or use: */
+
+[View]
+ +- [Front]
+
+/* Change to view mode to orthogonal mode (or perspective move). Number <5> or: */
+
+[View]
+ +- [View Persp/Ortho]
+
+/* Zoom in */
+
+Use the <Scrool mouse> wheel.
+
+/* Sub-divide horizontally the object. */
+
+Move the cursor over the object.
+
+Push <Ctrl> + <R>.
+
+Use the <Scrool mouse> wheel to have four sub-division lines.
+
+Push the <Left mouse> button.
+
+/* Deselect everything. */
+
+Push the <A> key.
+
+/* Select the top vertices of the cup. */
+
+Press and release the <B> key.
+
+/* Select the top vertices using a selection box. */
+
+Click and hold the <Left mouse> button.
+Moving the mouse.
+Release the <Left mouse> button.
+
+/* Move the top vertices of the cup down. */
+
+Click on the top blue arrow and move it down to reduce the height of
+the cup.
+
+/* Scale a 90% the top vertices of the cup. */
+
+Press the <S> key.
+
+Type <.9> and press <Enter>.
+
+Press the <A> key.
+
+/* Select the top-center vertices of the cup. */
+
+Press the <B> key.
+
+Press the <S> key.
+
+Type <1.05> and press <Enter>.
+
+Press <A>.
+
+/* Select the bottom vertices of the cup. */
+
+Press <B>.
+
+/* Select the bottom vertices using a selection box. */
+
+Click and hold the <Left mouse> button.
+Move the mouse.
+Release the <Left mouse> button.
+
+Press <S>.
+
+Type <.8> and press <Enter>.
+
+Press <A>.
+
+/* Move the cup to the left of the window. */
+
+Hold down the <Shift> key and hold the <Mittle mouse> button.
+
+/* Make the handle of the cup. */
+
+[Edit Mode]
+ +- [Object Mode]
+
+[Viewport Shading]
+ +- [Solid]
+
+/* Create a new origin point. */
+
+Click on the <Left mouse> button on the free section of the window.
+
+/* Create a path with the shape of the handle. */
+
+[Add]
+ +- [Curve]
+     +- [Path]
+
+/* Enter the Edit Mode. */
+
+[Object Mode]
+ +- [Edit Mode]
+
+/* Shape of the handle. */
+
+Click on the left node and move it up moving the arrows. 
+
+/* Enter the Object Mode. */
+
+[Edit Mode]
+ +- [Object Mode]
+
+/* Create the section of the handle. */
+
+[Add]
+ +- [Curve]
+     +- [Circle]
+
+/* Rotate the view. */
+
+Press the <middle mouse button> and drag the mouse.
+
+/* Scale the cicle. */
+
+Press <S>.
+
+Type <.2> and press <Enter>.
+
+/* Use the circle to control the shape along the path. */
+
+Select the handle by <Right mouse> clicking on it.
+
+Click on the [Object Data] button.
+
+(Geometry)
+ +- (Bevel Object:)
+     +- [BezierCircle]
+
+/* Change the circle resolution (convert it in a square). */
+
+<Right mouse> click on the circle.
+
+(Shape)
+ +- (Resolution:)
+     +- [Preview U:] <- 1
+
+/* Convert the handle into a mesh object. */
+
+<Right mouse> click on the handle to select it.
+
+Press <Alt> + <C>.
+
+(Convert to)
+ +- [Mesh from Curve/Meta/Suft/Text]
+
+/* Delete the (square) circle. */
+
+<Right mouse> click on the circle.
+
+Press the <Delete> key.
+
+(OK?)
+ +- [Delete X]
+
+/* Check if the handle is lined up properly with the cup. */
+
+Press the number <7> on the number pad to change the top view.
+
+Press the <Shift>.
+
+Press and hold the <Middle mouse> button while your drag the two pieces
+towards the center of the window.
+
+/* Switch the from view. */ 
+
+Press the number <1> on the number pad. 
+
+/* Move the cup a little bit closer to the handle. */
+
+<Right mouse> click on the cup to select it.
+
+Grab the red arrow in the direction of the haldle.
+
+/* Join the cup and the haldle together. */
+
+Select them all by holding down the <Shift> key while <Mouse right> clicking
+on them.
+
+Press <Ctrl> + <J>.
+
+/* Change to Edit Mode. */
+
+[Object Mode]
+ +- [Edit Mode]
+
+/* Connect the haldle and the cup. */
+
+Press <A> to deselect everything.
+
+[Face select - Shift-Click for multiple modes, Crtl-Click expand selection]
+
+/* Rotate the objects. */
+
+Hold down the <Middle mouse> button.
+
+/* Delete some faces of the cup. */
+
+<Right mouse> click on the faces that will touch the hanndle.
+
+Use the <Shift> key to add selections.
+
+Click the <Delete> key.
+
+(Delete)
+ +- [Faces]
+
+/* Join the handle to the cup. */
+
+[Edge select -Shift-Click for multiple modes, Ctrl-Click expands/contracts selections.]
+
+Holding down the <Shift> key, <Right mouse> click in the edges of the cup
+and the handle we want to join.
+
+Press <F> to create the new joining face.
+
+Repeat the process for the rest of the edges.
+
+Press <A>.
+
+/* Save the creation. */
+
+[File]
+ +- [Save as]
+
+Input the name of your file.
+
+[Save As Blender File]
+
+/* Starts the second video. */
+
+/* Make the inside of the cup. */
+
+[Viewport Shading]
+ +- [Wireframe]
+
+Press <1> in the number pad to switch to front view.
+
+[Vertex select - Shift-Click for multiple modes, Ctrl-Click contracts selection]
+
+/* Select the top vertices of the cup. */
+
+Press <B>.
+
+Holding down the <Left mouse> button, drag the selection box around the
+vertices.
+
+/* Extrude the selected vertices ... */
+
+Press <E>.
+
+/* ... to the same point. */
+
+Press <Enter>.
+
+/* Rotate the cup .*/
+
+/* Scale 80%. */
+
+Press <S>.
+
+Type <.8> and <Enter>.
+
+/* Switch the front view. */
+
+Press <1>.
+
+/* Extrude again the top vertices. */
+
+Press <E>.
+
+/* Move the mouse to see better what we are doing. */
+
+/* Restrict the movement to be straight up and down. */
+
+Press <Z>.
+
+/* Move the new vertices to the same height than outer ones. */
+
+Click the <Left mouse> button.
+
+/* Scale. */
+
+Press <S>.
+
+/* Move the mouse until place the new faces parallel with the outside
+of the cup. */
+
+Press the <Left mouse> button.
+
+/* Extrude again. */
+
+Press <E>.
+
+/* Limit movement. */
+
+Press <Z>.
+
+/* Move the mouse until place the new vertices to the same height than
+the outer ones. */
+
+/* Scale. */
+
+Press <S>.
+
+/* Move the mouse until place the new faces parallel with the outside
+of the cup. */
+
+Press the <Left mouse> button.
+
+/* Extrude. */
+
+Press <E>.
+
+/* Limit. */
+
+Press <Z>.
+
+/* Move the mouse until place the new vertices to the same height than
+the outer ones. */
+
+Press the <Left mouse> button.
+
+/* Scale. */
+
+Press <S>.
+
+/* Move the mouse until place the new faces parallel with the outside
+of the cup. */
+
+Press the <Left mouse> button.
+
+/* Extrude ... */
+
+Press <E>.
+
+/* ... to the same point. */
+
+Press <Enter>.
+
+/* Change the view going up. */
+
+/* Merge all the bottom vertices to the center of the cup. */
+
+(Mesh Tools)
+ +- (Remove:)
+     +- [Merge]
+       +- [At Center]
+
+/* Switch to solid. */
+
+[Viewport Shading]
+ +- [Solid]
+
+/* Switch to Object Mode. */
+
+[Edit Mode]
+ +- [Object Mode]
+
+/* Smooth the edges. */
+
+(Edit)
+ +- (Shading:)
+     +- [Smooth]
+
+[Object Modifiers]
+ +- [Add Modifier]
+     +- [Subdivision Surface]
+
+[Subdivisions:]
+ +- [View:] <- 3
+ +- [Render:] <- 3
+
+/* Make it look like it's made of Chinese ceramic material. */
+
+/* Be sure [Cycles Render] has been selected. */
+
+[Material]
+ +- [New]
+
+[Surface]
+  +- [Difuse BSDF]
+      +- [Mix Shader]
+
+[Shader:]
+ +- [Diffuse BSDF]
+ +- [Color:] <- Light gray color.
+
+[Shader:]
+ +- [Glossy BSDF]
+ +- [Roughne]: 0
+
+Type <0> and press <Enter>.
+
+[Surface]
+ +- [Fac:] <- 0.14
+
+Type <.14> and press <Enter>.
+
+/* Let's make the table. */
+
+/* Change the view to the front one. */
+
+Press <1>.
+
+/* Put the origin point below the cup. */
+
+<Right mouse> click below de cup.
+
+[Add]
+ +- [Mesh]
+     +- [Plane]
+
+/* Scale the plane up to 3 times its current size. */
+
+Press <S>.
+
+Type <3> and press <Enter>.
+
+/* Switch the front view. */
+
+Press <1>.
+
+/* Move up the plane until the bottom of the cup .*/
+
+Click on the blue arrow using the <Right mouse> botton and move the mouse.
+
+/* Set the material for this plane. */
+
+[Material]
+ +- [New]
+     +- [Color:] <- Light blue color.
+
+/* Add a light source. */
+
+/* Zoom out until see the camera. */
+
+/* Put the origin point next to the camera. */
+
+[Add]
+ +- [Mesh]
+     +- [Plane]
+
+/* Rotate the new plane 45 degrees. */
+
+Press <R>.
+
+Type <.45> and press <Enter>.
+
+/* Scale the new plane up to be five times its current size. */
+
+Press <S>.
+
+Type <5> and press <Enter>.
+
+/* Allow the plane to emit light. */
+
+[New]
+ +- [Surface]
+     +- [Surface:]
+         +- [Emission]
+
+/* Set the amount of light emitted to 10. */
+
+[Strength:] <- 10
+
+/* Switch to the camera view. */
+
+Press <0> on the number pad.
+
+/* To center the scene from the camera view. */
+
+[View]
+ +- [Properties]
+
+[Lock Camera to View]
+
+[View]
+ +- [Properties]
+
+Use the <Scroll mouse> wheel to zoom.
+
+<Shift> + hold the <Middle mouse> button to pan the view.
+
+/* Render with a low number of samples. */
+
+[Render (camera)]
+ +- [Render (button)]
+
+/* Render with a medium number of samples. */
+
+[Render (camera)]
+ +- [Render (button)]
+
+[Sampling]
+ +- Samples:
+    +- [Render:] <- 250
+
+/* Prevent "fireflies" (unwanted white pixels). */
+
+[Sampling]
+ +- [Clamp:] <- .98
+
+[Render (button)]
+
+/* Wait! */
+
+/* Save the image. */
+
+Press <F3>.
+
+Select a ".pgm" image.
+
+/* Return to the previous view. */
+
+Press <Esc>.
+
+/* Return to the render view. */
+
+Press <F11>.
+
+/* Save the project. */
+
+[File]
+ +- [Save]
+
+\end{verbatim}
+
